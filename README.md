@@ -1,5 +1,5 @@
 # Sistemas_de_controle
-Repositório de projetos envolvendo práticas em sistemas de controle (identificação e algoritmos em malha fechada).
+Repositório de projetos envolvendo práticas em sistemas de controle (identificação de sistemas e algoritmos em malha fechada).
 
 O repositório conta, atualmente, com três pastas. A pasta principal é a "Algoritmos de controle para sistema de 2 ordem", a qual possui vários códigos para modelar e testar algoritmos de controle utilizando um ARDUINO UNO e uma planta específica de 2a ordem (descrita na pasta "Modelagem e Identificação de Sistemas").
 
