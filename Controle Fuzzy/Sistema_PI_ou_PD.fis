@@ -1,0 +1,49 @@
+[System]
+Name='Sistema_PI_ou_PD'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='prod'
+OrMethod='max'
+ImpMethod='prod'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Erro'
+Range=[-4 4]
+NumMFs=3
+MF1='Negativo':'trapmf',[-4 -4 -2 0]
+MF2='Zero':'trimf',[-2 0 2]
+MF3='Positivo':'trapmf',[0 2 4 4]
+
+[Input2]
+Name='VariacaoErro'
+Range=[-4 4]
+NumMFs=3
+MF1='Negativa':'trapmf',[-4 -4 -2 0]
+MF2='Zero':'trimf',[-2 0 2]
+MF3='Positiva':'trapmf',[0 2 4 4]
+
+[Output1]
+Name='UouVariacaoU'
+Range=[-4 4]
+NumMFs=5
+MF1='NG':'trapmf',[-4 -4 -3.2 -1.6]
+MF2='Z':'trimf',[-1.6 0 1.6]
+MF3='PG':'trapmf',[1.6 3.2 4 4]
+MF4='NM':'trimf',[-3.2 -1.6 0]
+MF5='PM':'trimf',[0 1.6 3.2]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 4 (1) : 1
+1 3, 4 (1) : 1
+2 2, 2 (1) : 1
+2 1, 1 (1) : 1
+2 3, 3 (1) : 1
+3 1, 5 (1) : 1
+3 2, 5 (1) : 1
+3 3, 3 (1) : 1
